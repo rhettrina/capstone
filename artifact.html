@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artifact</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Hind Kochi -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Kochi:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Custom Font */
+        .font-hind-kochi {
+            font-family: 'Hind Kochi', sans-serif;
+        }
+        
+    </style>
+    
+</head>
+
+<body class="bg-[#F0F0F0] h-screen flex flex-col font-hind-kochi">
+
+    <!-- HEADER -->
+    <header class="bg-[#1C1B19] text-white h-24 flex-row justify-center items-center drop-shadow-xl shadow-gray-900/50 py-3 pt-5">
+        <div class="flex justify-center items-center h-full w-full">
+            <div class="h-12 w-full flex justify-between items-center px-3 pr-9">
+                <!-- Logo and Title -->
+                <div class="h-full w-auto flex justify-center items-center gap-x-1.5">
+                    <img src="asset/LOGO.png" alt="Museo Bulawan Logo" class="h-full">
+                    <div class="bg-[#FFFFFF] h-full w-1.5"></div>
+                    <div class="h-12 w-auto flex flex-col justify-center leading-tight">
+                        <a class="w-full text-[24px] font-bold text-justify tracking-wider">MUSEO BULAWAN</a>
+                        <a class="w-full text-[12px] font-bold text-justify">MANAGEMENT INFORMATION SYSTEM</a>
+                    </div>
+                </div>
+                <!-- Notification Bell -->
+                <button class="w-[34px] h-[32px] bg-[#0B0B0B] flex items-center justify-center rounded focus:outline-none hover:bg-[#505050] active:bg-[#333]">
+                    <i class="fa-regular fa-bell text-white text-[18px]"></i>
+                </button>
+            </div>
+        </div>
+        <h1 class="bg-white h-[1px] mx-9"></h1>
+    </header>
+
+    <!-- MAIN CONTENT AREA -->
+    <div class="flex-grow flex flex-row justify-start items-center ">
+
+        <!-- Sidebar -->
+        <div class="w-1/5 h-full bg-[#1C1B19] flex justify-center">
+            <div class="w-[80%] h-auto mx-5 my-14 flex flex-col justify-between items-center font-hind-kochi text-[28px] font-bold tracking-wider">
+                
+                <!-- Sidebar Links -->
+                <div class="w-full flex flex-col gap-y-4 p-4">
+                    <!-- Dashboard Link -->
+                    <a href="index.html" class="w-full flex flex-row justify-start items-center gap-3 text-white pl-2 h-[60px] cursor-pointer hover:bg-gray-100 hover:text-black transition rounded-2xl group">
+                        <img src="asset/dashboard_icon.png" alt="donation" class="h-auto w-[40px] filter brightness-0 invert group-hover:invert-0">
+                        <span>Dashboard</span>
+                    </a>
+
+                    <!-- Donation Link -->
+                    <a href="donation.html" class="w-full flex flex-row justify-start items-center gap-3 text-white pl-2 h-[60px] cursor-pointer hover:bg-gray-100 hover:text-black transition rounded-2xl group">
+                        <img src="asset/donation.png" alt="donation" class="h-auto w-[40px] filter brightness-0 invert group-hover:invert-0">
+                        <span>Donation</span>
+                    </a>
+
+                    <!-- Artifact Link -->
+                    <a href="" class="w-full flex flex-row justify-start items-center gap-3 bg-white rounded-2xl pl-2 h-[60px] cursor-pointer">
+                        <img src="asset/artifact.png" alt="donation" class="h-auto w-[40px]">
+                        <span class="text-black">Artifact</span>
+                    </a>
+
+                    <!-- Appointment Link -->
+                    <a href="appointment.html" class="w-full flex flex-row justify-start items-center gap-3 text-white pl-2 h-[60px] cursor-pointer hover:bg-gray-100 hover:text-black transition rounded-2xl group">
+                        <img src="asset/appointment.png" alt="appointment" class="h-auto w-[40px] filter brightness-0 invert group-hover:invert-0">
+                        <span>Appointment</span>
+                    </a>
+
+                    <!-- Article Link -->
+                    <a href="article.html" class="w-full flex flex-row justify-start items-center gap-3 text-white pl-2 h-[60px] cursor-pointer hover:bg-gray-100 hover:text-black transition rounded-2xl group">
+                        <img src="asset/article.png" alt="article" class="h-auto w-[40px] filter brightness-0 invert group-hover:invert-0">
+                        <span>Article</span>
+                    </a>
+                </div>
+
+                <!-- Logout Button -->
+                <a href="" class="w-full flex flex-row justify-center items-center gap-3 text-white cursor-pointer hover:bg-red-900 transition p-3 rounded-2xl">
+                    <img src="asset/logout.png" alt="logout" class="h-auto w-[40px]">
+                    <span>Logout</span>
+                </a>
+
+            </div>
+        </div>
+
+        <!--DASHBOARD CONTENT-->
+
+        <div class="w-4/5 h-full flex flex-col justify-start items-start px-16 py-8">
+            <div class="w-full h-auto flex justify-between items-center ">
+                <div class="text-[40px] font-bold">
+                    <span>Artifact</span>
+                </div>
+                <div class="relative">
+                    <input type="text" placeholder="Enter Keyword" 
+                        class="pl-4 pr-10 py-2 w-64 text-black border border-black rounded-lg shadow-sm outline-none">
+                    <i class="fa-solid fa-magnifying-glass absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 cursor-pointer"></i>
+                </div>
+            </div>
+
+            <!--main content ^^^-->
+            <div class="h-[90%] w-full pt-3">
+                <div class="w-full h-full  flex flex-col 0 pl-7">
+                    <div class="w-full h-[20%] grid grid-cols-5 gap-14  font-bold text-white">
+
+                        <!--TOTAL ARTIFACTS-->
+                        <div class="bg-[#1C1B19] rounded-lg flex flex-col py-4 px-7">
+                            <div class="w-full h-1/5">  <span>Total Artifacts</span>  </div>
+                            <div class="w-full h-3/5 flex items-center">  <span class="text-5xl">271</span> </div>
+                            <div class="w-full h-1/5"> <span>January 8, 2025</span> </div>
+                        </div>
+
+                        <!--ACQUIRED-->
+                        <div class="bg-[#1C1B19] rounded-lg flex flex-col py-4 px-7">
+                            <div class="w-full h-1/5">  <span>Acquired</span>  </div>
+                            <div class="w-full h-3/5 flex items-center">  <span class="text-5xl">271</span> </div>
+                            <div class="w-full h-1/5"> <span>January 8, 2025</span> </div>
+                        </div> 
+
+                        <!--BORROWING-->
+                        <div class="bg-[#1C1B19] rounded-lg flex flex-col py-4 px-7">
+                            <div class="w-full h-1/5">  <span>Borrowing</span>  </div>
+                            <div class="w-full h-3/5 flex items-center">  <span class="text-5xl">271</span> </div>
+                            <div class="w-full h-1/5"> <span>January 8, 2025</span> </div>
+                        </div> 
+
+                        <!--UNFINISHED EDIT-->
+                        <div class="bg-[#1C1B19] rounded-lg flex flex-col py-4 px-7">
+                            <div class="w-full h-1/5">  <span>Unfinished Edit</span>  </div>
+                            <div class="w-full h-3/5 flex items-center">  <span class="text-5xl">271</span> </div>
+                            <div class="w-full h-1/5"> <span>January 8, 2025</span> </div>
+                        </div> 
+
+                        <!--ON DISPLAY-->
+                        <div class="bg-[#1C1B19] rounded-lg flex flex-col py-4 px-7">
+                            <div class="w-full h-1/5">  <span>On Display</span>  </div>
+                            <div class="w-full h-3/5 flex items-center">  <span class="text-5xl">271</span> </div>
+                            <div class="w-full h-1/5"> <span>January 8, 2025</span> </div>
+                        </div>
+    
+                    </div>
+                    <div class="w-full h-[15%] flex flex-col mb-4">
+                        <div class="w-full h-full flex items-center justify-between pl-10 pt-7">
+                            <div class="w-[30%] h-full flex justify-between items-center font-bold text-sm">
+                                <!-- Active Form Tab -->
+                                <div class="cursor-pointer tab-button text-black opacity-100 hover:opacity-80" data-tab="artifacts">
+                                    <span>Artifacts</span>
+                                </div>
+                            
+                                <!-- Transfer Status Tab -->
+                                <div class="cursor-pointer tab-button text-gray-500 opacity-70 hover:text-black hover:opacity-100" data-tab="acquired">
+                                    <span>Acquired</span>
+                                </div>
+                            
+                                <!-- Donators Records Tab -->
+                                <div class="cursor-pointer tab-button text-gray-500 opacity-70 hover:text-black hover:opacity-100" data-tab="borrowing">
+                                    <span>Borrowing</span>
+                                </div>
+
+                                <div class="cursor-pointer tab-button text-gray-500 opacity-70 hover:text-black hover:opacity-100" data-tab="display">
+                                    <span>Display</span>
+                                </div>
+                            </div>
+                            
+                            <div class="relative inline-block">
+                                <select class="block appearance-none bg-white border border-gray-300 text-gray-700 py-2 px-2 pr-8 rounded-xl leading-tight focus:outline-none focus:border-black">
+                                    <option value="date">Sort: Date</option>
+                                    <option value="name">Sort: Name</option>
+                                    <option value="title">Sort: Title</option>
+                                    <option value="status">Sort: Status</option>
+                                    <option value="transfer_status">Sort: Transfer Status</option>
+                                    <option value="updated">Sort: Updated</option>
+                                </select>
+                                <div class="absolute inset-y-0 right-3 flex items-center pointer-events-none">
+                                    <i class="fas fa-chevron-down text-black"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <h1 class="bg-black h-[1px]"></h1>
+                    </div>
+                        
+                            <!--FORMS TAB CONTENT-->
+                            <div id="artifacts" class="tab-content h-[60%] w-full"> 
+                                <div class="grid grid-cols-6 gap-3 font-bold text-sm opacity-95 h-[5%] px-8">
+                                    <div class="flex justify-center">Date</div>
+                
+                                    <div class="flex justify-center col-span-2">Title</div>
+                                    <div class="flex justify-center ">Type</div>
+                                    <div class="flex justify-center ">Display Status</div>
+                                    <div class="flex justify-center ">Updated</div>
+                                </div>
+                                <div class="w-full h-[95%] overflow-y-auto max-h-[420px]">
+                                    <!-- SCROLLABLE DATA -->
+                                    <div class="flex flex-col gap-4 px-1 mt-3 ">
+                                        <!-- Row 1 -->
+                                        <div class="grid grid-cols-6 gap-3 bg-white w-full h-12 outline outline-black outline-1 rounded-md px-7 text-base">
+                                            <div class=" flex justify-center items-center">02-19-2024</div>
+                                            <div class=" flex justify-center items-center col-span-2"> Statue of a Great Grandfather</div>
+                                            <div class=" flex justify-center items-center">Lending</div>
+                                            <div class=" flex justify-center items-center px-12">
+                                                <div class="w-full bg-[#9C7744] flex justify-center items-center text-white outline outline-1 outline-black rounded-sm">
+                                                    Posted
+                                                </div>
+                                            </div>
+                                            <div class=" flex justify-center items-center">02-19-2024</div>
+                                        </div>
+                                        
+                                        <!-- Row 2 -->
+                                        
+                                        <!-- Add more rows dynamically -->
+                                    </div>
+                                    
+                                </div>  
+                            </div>
+
+                            <!--TRANSFER STATUS TAB CONTENT-->
+                            <div id="acquired" class="tab-content hidden h-[60%] w-full">
+                               acquired
+                            </div>
+
+                            <!--DONATORS TAB CONTENT-->
+                            <div id="borrowing" class="tab-content hidden h-[60%] w-full">
+                                borrow
+                            </div>
+
+                            <div id="display" class="tab-content hidden h-[60%] w-full">
+                                display
+                             </div>
+                
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+         document.addEventListener("DOMContentLoaded", function () {
+                const tabs = document.querySelectorAll(".tab-button");
+                const contents = document.querySelectorAll(".tab-content");
+                
+                tabs.forEach(tab => {
+                    tab.addEventListener("click", function () {
+                        // Remove active styling from all tabs
+                        tabs.forEach(t => {
+                            t.classList.remove("text-black", "opacity-100");
+                            t.classList.add("text-gray-500", "opacity-70");
+                        });
+                        
+                        // Hide all content sections
+                        contents.forEach(content => content.classList.add("hidden"));
+                        
+                        // Activate the clicked tab
+                        this.classList.remove("text-gray-500", "opacity-70");
+                        this.classList.add("text-black", "opacity-100");
+                        
+                        // Show the corresponding content
+                        const tabId = this.getAttribute("data-tab");
+                        document.getElementById(tabId).classList.remove("hidden");
+                    });
+                });
+            });
+        
+    </script>
+</body>
+
+
+</html>

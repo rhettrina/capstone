@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Hind Kochi -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Kochi:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        /* Custom Font */
+        .font-hind-kochi {
+            font-family: 'Hind Kochi', sans-serif;
+        }
+        
+    </style>
+    
+</head>
+
+<body class="bg-[#F0F0F0] h-screen flex flex-col font-hind-kochi">
+
+    <!-- HEADER -->
+    <header class="bg-[#1C1B19] text-white h-24 flex-row justify-center items-center drop-shadow-xl shadow-gray-900/50 py-3 pt-5">
+        <div class="flex justify-center items-center h-full w-full">
+            <div class="h-12 w-full flex justify-between items-center px-3 pr-9">
+                <!-- Logo and Title -->
+                <div class="h-full w-auto flex justify-center items-center gap-x-1.5">
+                    <img src="asset/LOGO.png" alt="Museo Bulawan Logo" class="h-full">
+                    <div class="bg-[#FFFFFF] h-full w-1.5"></div>
+                    <div class="h-12 w-auto flex flex-col justify-center leading-tight">
+                        <a class="w-full text-[24px] font-bold text-justify tracking-wider">MUSEO BULAWAN</a>
+                        <a class="w-full text-[12px] font-bold text-justify">MANAGEMENT INFORMATION SYSTEM</a>
+                    </div>
+                </div>
+                <!-- Notification Bell -->
+                <button class="w-[34px] h-[32px] bg-[#0B0B0B] flex items-center justify-center rounded focus:outline-none hover:bg-[#505050] active:bg-[#333]">
+                    <i class="fa-regular fa-bell text-white text-[18px]"></i>
+                </button>
+            </div>
+        </div>
+        <h1 class="bg-white h-[1px] mx-9"></h1>
+    </header>
+
+    <!-- MAIN CONTENT AREA -->
+    <div class="flex-grow flex flex-row justify-start items-center ">
+
+        <!-- Sidebar -->
+        <div class="w-1/5 h-full bg-[#1C1B19] flex justify-center">
+            <div class="w-[80%] h-auto mx-5 my-14 flex flex-col justify-between items-center font-hind-kochi text-[28px] font-bold tracking-wider">
+                
+                <!-- Sidebar Links -->
+                <div class="w-full flex flex-col gap-y-4 p-4">
+                    <!-- Dashboard Link -->
+                    <a href="" class="w-full flex flex-row justify-start items-center gap-3 bg-white rounded-2xl pl-2 h-[60px] cursor-pointer">
+                        <img src="asset/dashboard_icon.png" alt="dashboard" class="h-auto w-[40px]  filter brightness-1 invert group-active::invert-0">
+                        <span class="text-black">Dashboard</span>
+                    </a>
+
+                    <!-- Donation Link -->
+                    <a href="donation.html" class="w-full flex flex-row justify-start items-center gap-3 text-white pl-2 h-[60px] cursor-pointer hover:bg-gray-100 hover:text-black transition rounded-2xl group">
+                        <img src="asset/donation.png" alt="donation" class="h-auto w-[40px] filter brightness-0 invert group-hover:invert-0">
+                        <span>Donation</span>
+                    </a>
+
+                    <!-- Artifact Link -->
+                    <a href="artifact.html" class="w-full flex flex-row justify-start items-center gap-3 text-white pl-2 h-[60px] cursor-pointer hover:bg-gray-100 hover:text-black transition rounded-2xl group">
+                        <img src="asset/artifact.png" alt="artifact" class="h-auto w-[40px] filter brightness-0 invert group-hover:invert-0">
+                        <span>Artifact</span>
+                    </a>
+
+                    <!-- Appointment Link -->
+                    <a href="appointment.html" class="w-full flex flex-row justify-start items-center gap-3 text-white pl-2 h-[60px] cursor-pointer hover:bg-gray-100 hover:text-black transition rounded-2xl group">
+                        <img src="asset/appointment.png" alt="appointment" class="h-auto w-[40px] filter brightness-0 invert group-hover:invert-0">
+                        <span>Appointment</span>
+                    </a>
+
+                    <!-- Article Link -->
+                    <a href="article.html" class="w-full flex flex-row justify-start items-center gap-3 text-white pl-2 h-[60px] cursor-pointer hover:bg-gray-100 hover:text-black transition rounded-2xl group">
+                        <img src="asset/article.png" alt="article" class="h-auto w-[40px] filter brightness-0 invert group-hover:invert-0">
+                        <span>Article</span>
+                    </a>
+                </div>
+
+                <!-- Logout Button -->
+                <a href="" class="w-full flex flex-row justify-center items-center gap-3 text-white cursor-pointer hover:bg-red-900 transition p-3 rounded-2xl">
+                    <img src="asset/logout.png" alt="logout" class="h-auto w-[40px]">
+                    <span>Logout</span>
+                </a>
+
+            </div>
+        </div>
+
+        <!--DASHBOARD CONTENT-->
+
+        <div class="w-4/5 h-full flex flex-col justify-start items-start px-16 py-8">
+            <div class="w-full h-auto flex justify-between items-center ">
+                <div class="text-[40px] font-bold">
+                    <span>Dashboard</span>
+                </div>
+                <div class="relative">
+                    <input type="text" placeholder="Enter Keyword" 
+                        class="pl-4 pr-10 py-2 w-64 text-black border border-black rounded-lg shadow-sm outline-none">
+                    <i class="fa-solid fa-magnifying-glass absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 cursor-pointer"></i>
+                </div>
+                
+                
+            </div>
+            <div class="h-[90%] w-full pt-3">
+                <div class="w-full h-full  flex flex-grow-0 justify-between gap-6">
+
+                    <div class="w-[45%] h-full flex flex-col gap-6">
+                        <!-- First Part -->
+                        <div class="w-full flex-1 flex flex-row gap-4 ">
+                          <div class="h-full w-[60%] bg-[#FFFFFF] flex flex-col justify-start items-start py-2 shadow-lg shadow-gray-400">
+
+                            <div class="w-full h-1/6 font-hind-kochi">
+                                <div class="w-full h-[60%] text-[1.6rem] font-semibold pl-3">Expected Visitors</div>
+                                <div class="w-full h-[40%] text-[1rem] text-[#6C6C6C] font-medium pl-5">1603</div>
+                            </div>
+
+                            <!--BILOG REACT JS -->
+                            <div class="w-full h-5/6 flex items-center justify-center">
+                               <span> 80% </span>
+                              
+                            </div>
+                          </div>
+                          <div class="h-full w-[50%] flex flex-col gap-4 ">
+                            <div class="h-[50%] w-full bg-[#1C1B19] shadow-lg shadow-gray-400 pt-4 pb-6 px-4">
+
+                                <div class="w-full h-full flex flex-col justify-start items-center">
+
+                                    <div class="w-full h-4/5  flex justify-start items-center gap-x-3 font-hind-kochi ">
+
+                                        <div class="h-full w-[55%] flex flex-col justify-center items-center text-white font-bold text-center">
+                                            <span class="w-full h-1/3 text-2xl flex items-center justify-center">Present</span>
+                                            <span class="w-full h-2/3 text-5xl flex items-center justify-center">1520</span>
+                                        </div>
+                                        <div class="h-full w-[60%] flex items-end justify-start pb-2 text-[#D5FFCB]">
+                                            <span class="w-full  font-bold flex items-center gap-1 text-lg">
+                                                +2.3%  
+                                                <i class="fas fa-arrow-up text-base"></i>
+                                            </span>
+                                        </div>
+                                        
+
+                                    </div>
+
+                                    <div class="w-full h-1/5 text-[#EAC39C] font-bold flex items-center justify-center">
+                                       <span class="w-full flex items-center justify-start pl-1">Compared to last month (1486)</span>
+                                    </div>
+
+                                </div>
+                                
+                            </div>
+                            <div class="h-[50%] w-full bg-[#1C1B19] shadow-lg shadow-gray-400 pt-4 pb-6 px-4">
+
+                                <div class="w-full h-full flex flex-col justify-start items-center">
+
+                                    <div class="w-full h-4/5  flex justify-start items-center gap-x-3 font-hind-kochi ">
+
+                                        <div class="h-full w-[55%] flex flex-col justify-center items-center text-white font-bold text-center">
+                                            <span class="w-full h-1/3 text-2xl flex items-center justify-center">Absent</span>
+                                            <span class="w-full h-2/3 text-5xl flex items-center justify-center">83 </span>
+                                        </div>
+                                        <div class="h-full w-[60%] flex items-end justify-start pb-2 text-[#FF3A3A] ">
+                                            <span class="w-full font-bold flex items-center gap-1 text-lg">
+                                                +3.164%  
+                                                <i class="fas fa-arrow-up text-base"></i>
+                                            </span>
+                                        </div>
+                                        
+
+                                    </div>
+
+                                    <div class="w-full h-1/5 text-[#EAC39C] font-bold flex items-center justify-center">
+                                       <span class="w-full flex items-center justify-start pl-1">Compared to last month (80)</span>
+                                    </div>
+
+                                </div>
+                                
+                            </div>
+                          </div>
+                        </div>
+                      
+                        <!-- Second Part -->
+                        <div class="w-full flex-1 flex flex-row gap-3">
+                          <div class="w-[35%] h-full flex flex-col gap-5 ">
+                            <div class="h-[50%] w-full bg-[#1C1B19] rounded-lg shadow-lg shadow-gray-400">
+                                <div class="w-full h-full flex flex-col justify-start items-start p-4 text-white ">
+                                    <div class="w-full h-1/5 flex items-center justify-start text-base font-semibold">Present</div>
+                                    <div class="w-full h-4/5 flex items-center justify-center text-6xl pb-5 font-bold">593</div>
+                                </div>
+                            </div>
+                            <div class="h-[50%] w-full bg-[#1C1B19] rounded-lg shadow-lg shadow-gray-400">
+                                <div class="w-full h-full flex flex-col justify-start items-start p-4 text-white ">
+                                    <div class="w-full h-1/5 flex items-center justify-start text-base font-semibold">Approved Visits</div>
+                                    <div class="w-full h-4/5 flex items-center justify-center text-6xl pb-5 font-bold">593</div>
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="w-[45%] h-full flex flex-col gap-5 ">
+                            <div class="h-[50%] w-full pt-9 pb-3">
+                                <div class="h-full w-full bg-[#EFEEDE] shadow-xl shadow-gray-400 rounded-lg flex flex-row justify-center items-center">
+                                    <div class="w-[45%] h-full flex flex-col justify-start items-center font-bold">
+                                        <div class="w-full h-2/5 pl-4 "><span class="text-base w-full h-full flex justify-start items-center">Today</span></div>
+                                        <div class="w-full h-4/5"><span class="text-[40px] w-full h-full flex justify-center items-start pb-6">423</span></div>
+                                    </div>
+                                    <div class="w-[60%] h-full">
+                                        <div class="h-full w-full pt-4 pb-2 px-2">
+                                            <div class="bg-black w-full h-full rounded-lg flex flex-col justify-center items-center text-[#EAC39C] px-2 font-semibold">
+                                                <div class="w-full h-1/4"><span class="text-sm">This Month</span></div>
+                                                <div class="w-full h-3/4 flex items-center justify-center"><span class="text-5xl pb-3">54</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="h-[50%] w-full pt-9 pb-3">
+                                <div class="h-full w-full bg-[#EFEEDE] shadow-xl shadow-gray-400 rounded-lg flex flex-row justify-center items-center">
+                                    <div class="w-[45%] h-full flex flex-col justify-start items-center font-bold">
+                                        <div class="w-full h-2/5 pl-4 "><span class="text-base w-full h-full flex justify-start items-center">Today</span></div>
+                                        <div class="w-full h-4/5"><span class="text-[40px] w-full h-full flex justify-center items-start pb-6">423</span></div>
+                                    </div>
+                                    <div class="w-[60%] h-full">
+                                        <div class="h-full w-full pt-4 pb-2 px-2">
+                                            <div class="bg-black w-full h-full rounded-lg flex flex-col justify-center items-center text-[#EAC39C] px-2 font-semibold">
+                                                <div class="w-full h-1/4"><span class="text-sm">This Month</span></div>
+                                                <div class="w-full h-3/4 flex items-center justify-center"><span class="text-5xl pb-3">59</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
+
+                          <div class="w-[50%] h-full bg-[#1C1B19] rounded-lg ml-3  shadow-lg shadow-gray-400">
+                            <div class="w-full h-[15%] flex items-center justify-between px-7 font-bold text-lg">
+                                <span class="text-white">Quota</span>
+                                <span class="text-[#EAC39C]">68%</span>
+                            </div>
+                            <div class="w-full h-[85%] px-5 pt-2 pb-4">
+                                <div class="w-full h-full bg-white rounded-lg flex-col justify-start items-start">
+                                    <div class="w-full h-[32%]"><span class="p-2">1000</span></div>
+                                    <div class="w-full h-[68%] bg-[#0066FF]"><span class="p-2 text-white">680</span></div>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="w-[55%] h-full flex flex-col gap-6">
+                        <!-- Third Part -->
+                        <div class="w-full h-full flex-1 bg-[#1C1B19] px-6  shadow-lg shadow-gray-400">
+                          <div class="w-full h-[15%] flex justify-start items-center pl-4 pt-2"> <span class="font-bold text-3xl text-white">Appointment Rate</span></div>
+
+                          <!--GRAPHS USE REACT JS -->
+                          <div class="w-full h-[80%] bg-white rounded-lg mt-1 flex items-center justify-center">
+
+                          </div>
+                        </div>
+                      
+                        <!-- Fourth Part -->
+                        <div class="w-full flex-1 flex flex-row gap-10">
+                          <div class="w-[50%] h-full bg-white shadow-lg shadow-gray-400 flex flex-col justify-start items-center">
+                            <div class="w-full h-1/6 flex flex-col justify-start items-center px-7">
+                                <div class="w-full h-full flex flex-row justify-between items-end text-2xl px-4">
+                                    <span>Pending Queries</span>
+                                    <i class="fas fa-arrow-down text-black"></i>
+                                </div>
+                                <h1 class="bg-black h-[3px] mx-9 w-full"></h1>
+                            </div>
+
+                                <!--CUSTOM TABLE -->
+                                
+
+                          </div>
+
+
+
+                          <div class="w-[50%] h-full flex flex-col gap-5 pb-2">
+
+                            <div class="w-full h-[30%] flex justify-start items-center"> <span class="font-bold text-6xl">Walk-ins</span></div>
+                            <!-- APPOINTMENT ADD BLA-->
+                            <button class="w-full h-[40%] bg-white rounded-lg outline outline-black flex items-center justify-between px-6 shadow-lg shadow-gray-400">
+                                <span class="font-bold text-4xl">Appointment</span>
+                                <div class="w-9 h-9 bg-white outline outline-black rounded-md outline-4 flex items-center justify-center">
+                                    <i class="fas fa-plus text-black text-3xl"></i>
+                                </div>
+                            </button>
+                            
+                             <!-- DONATION ADD BLA-->
+                            <button class="w-full h-[40%] bg-white rounded-lg outline outline-black flex items-center justify-between px-6 shadow-lg shadow-gray-400">
+                                <span class="font-bold text-4xl">Donation</span>
+                                <div class="w-9 h-9 bg-white outline outline-black rounded-md outline-4 flex items-center justify-center">
+                                    <i class="fas fa-plus text-black text-3xl"></i>
+                                </div>
+                                
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      
+                </div>
+                
+                
+            </div>
+
+        </div>
+
+    </div>
+    
+</body>
+
+
+</html>
