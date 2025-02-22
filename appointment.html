@@ -5,31 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Appointment</title>
-    
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Google Fonts: Hind Kochi -->
     <link href="https://fonts.googleapis.com/css2?family=Hind+Kochi:wght@400;700&display=swap" rel="stylesheet">
-    
+
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         /* Custom Font */
         .font-hind-kochi {
             font-family: 'Hind Kochi', sans-serif;
         }
-        
     </style>
-    
+
 </head>
 
 <body class="bg-[#F0F0F0] h-screen flex flex-col font-hind-kochi">
 
     <!-- HEADER -->
-    <header class="bg-[#1C1B19] text-white h-24 flex-row justify-center items-center drop-shadow-xl shadow-gray-900/50 py-3 pt-5">
+    <header
+        class="bg-[#1C1B19] text-white h-24 flex-row justify-center items-center drop-shadow-xl shadow-gray-900/50 py-3 pt-5">
         <div class="flex justify-center items-center h-full w-full">
             <div class="h-12 w-full flex justify-between items-center px-3 pr-9">
                 <!-- Logo and Title -->
@@ -42,7 +42,8 @@
                     </div>
                 </div>
                 <!-- Notification Bell -->
-                <button class="w-[34px] h-[32px] bg-[#0B0B0B] flex items-center justify-center rounded focus:outline-none hover:bg-[#505050] active:bg-[#333]">
+                <button
+                    class="w-[34px] h-[32px] bg-[#0B0B0B] flex items-center justify-center rounded focus:outline-none hover:bg-[#505050] active:bg-[#333]">
                     <i class="fa-regular fa-bell text-white text-[18px]"></i>
                 </button>
             </div>
@@ -55,43 +56,55 @@
 
         <!-- Sidebar -->
         <div class="w-1/5 h-full bg-[#1C1B19] flex justify-center">
-            <div class="w-[80%] h-auto mx-5 my-14 flex flex-col justify-between items-center font-hind-kochi text-[28px] font-bold tracking-wider">
-                
+            <div
+                class="w-[80%] h-auto mx-5 my-14 flex flex-col justify-between items-center font-hind-kochi text-[28px] font-bold tracking-wider">
+
                 <!-- Sidebar Links -->
                 <div class="w-full flex flex-col gap-y-4 p-4">
                     <!-- Dashboard Link -->
-                    <a href="index.html" class="w-full flex flex-row justify-start items-center gap-3 text-white pl-2 h-[60px] cursor-pointer hover:bg-gray-100 hover:text-black transition rounded-2xl group">
-                        <img src="asset/dashboard_icon.png" alt="dashboard" class="h-auto w-[40px] filter brightness-0 invert group-hover:invert-0">
+                    <a href="index.html"
+                        class="w-full flex flex-row justify-start items-center gap-3 text-white pl-2 h-[60px] cursor-pointer hover:bg-gray-100 hover:text-black transition rounded-2xl group">
+                        <img src="asset/dashboard_icon.png" alt="dashboard"
+                            class="h-auto w-[40px] filter brightness-0 invert group-hover:invert-0">
                         <span>Dashboard</span>
                     </a>
 
                     <!-- Donation Link -->
-                    <a href="donation.html" class="w-full flex flex-row justify-start items-center gap-3 text-white pl-2 h-[60px] cursor-pointer hover:bg-gray-100 hover:text-black transition rounded-2xl group">
-                        <img src="asset/donation.png" alt="dashboard" class="h-auto w-[40px] filter brightness-0 invert group-hover:invert-0">
+                    <a href="donation.html"
+                        class="w-full flex flex-row justify-start items-center gap-3 text-white pl-2 h-[60px] cursor-pointer hover:bg-gray-100 hover:text-black transition rounded-2xl group">
+                        <img src="asset/donation.png" alt="dashboard"
+                            class="h-auto w-[40px] filter brightness-0 invert group-hover:invert-0">
                         <span>Donation</span>
                     </a>
 
                     <!-- Artifact Link -->
-                    <a href="artifact.html" class="w-full flex flex-row justify-start items-center gap-3 text-white pl-2 h-[60px] cursor-pointer hover:bg-gray-100 hover:text-black transition rounded-2xl group">
-                        <img src="asset/artifact.png" alt="artifact" class="h-auto w-[40px] filter brightness-0 invert group-hover:invert-0">
+                    <a href="artifact.html"
+                        class="w-full flex flex-row justify-start items-center gap-3 text-white pl-2 h-[60px] cursor-pointer hover:bg-gray-100 hover:text-black transition rounded-2xl group">
+                        <img src="asset/artifact.png" alt="artifact"
+                            class="h-auto w-[40px] filter brightness-0 invert group-hover:invert-0">
                         <span>Artifact</span>
                     </a>
 
                     <!-- Appointment Link -->
-                    <a href="" class="w-full flex flex-row justify-start items-center gap-3 bg-white rounded-2xl pl-2 h-[60px] cursor-pointer">
-                        <img src="asset/appointment.png" alt="donation" class="h-auto w-[40px] filter brightness-1 invert group-active::invert-0">
+                    <a href=""
+                        class="w-full flex flex-row justify-start items-center gap-3 bg-white rounded-2xl pl-2 h-[60px] cursor-pointer">
+                        <img src="asset/appointment.png" alt="donation"
+                            class="h-auto w-[40px] filter brightness-1 invert group-active::invert-0">
                         <span class="text-black">Appointment</span>
                     </a>
 
                     <!-- Article Link -->
-                    <a href="article.html" class="w-full flex flex-row justify-start items-center gap-3 text-white pl-2 h-[60px] cursor-pointer hover:bg-gray-100 hover:text-black transition rounded-2xl group">
-                        <img src="asset/article.png" alt="article" class="h-auto w-[40px] filter brightness-0 invert group-hover:invert-0">
+                    <a href="article.html"
+                        class="w-full flex flex-row justify-start items-center gap-3 text-white pl-2 h-[60px] cursor-pointer hover:bg-gray-100 hover:text-black transition rounded-2xl group">
+                        <img src="asset/article.png" alt="article"
+                            class="h-auto w-[40px] filter brightness-0 invert group-hover:invert-0">
                         <span>Article</span>
                     </a>
                 </div>
 
                 <!-- Logout Button -->
-                <a href="" class="w-full flex flex-row justify-center items-center gap-3 text-white cursor-pointer hover:bg-red-900 transition p-3 rounded-2xl">
+                <a href=""
+                    class="w-full flex flex-row justify-center items-center gap-3 text-white cursor-pointer hover:bg-red-900 transition p-3 rounded-2xl">
                     <img src="asset/logout.png" alt="logout" class="h-auto w-[40px]">
                     <span>Logout</span>
                 </a>
@@ -107,12 +120,13 @@
                     <span>Appointments</span>
                 </div>
                 <div class="relative">
-                    <input type="text" placeholder="Enter Keyword" 
+                    <input type="text" placeholder="Enter Keyword"
                         class="pl-4 pr-10 py-2 w-64 text-black border border-black rounded-lg shadow-sm outline-none">
-                    <i class="fa-solid fa-magnifying-glass absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 cursor-pointer"></i>
+                    <i
+                        class="fa-solid fa-magnifying-glass absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 cursor-pointer"></i>
                 </div>
-                
-                
+
+
             </div>
             <div class="h-[90%] w-full pt-3">
                 <div class="w-full h-full  flex flex-col 0 pl-7">
@@ -120,61 +134,65 @@
 
                         <!--TOTAL Appointments-->
                         <div class="bg-[#1C1B19] rounded-lg flex flex-col py-4 px-7">
-                            <div class="w-full h-1/5">  <span>Total Appointments</span>  </div>
-                            <div class="w-full h-3/5 flex items-center">  <span class="text-5xl">271</span> </div>
+                            <div class="w-full h-1/5"> <span>Total Appointments</span> </div>
+                            <div class="w-full h-3/5 flex items-center"> <span class="text-5xl">271</span> </div>
                             <div class="w-full h-1/5"> <span>January 8, 2025</span> </div>
                         </div>
 
                         <!--Approved-->
                         <div class="bg-[#1C1B19] rounded-lg flex flex-col py-4 px-7">
-                            <div class="w-full h-1/5">  <span>Approved</span>  </div>
-                            <div class="w-full h-3/5 flex items-center">  <span class="text-5xl">271</span> </div>
+                            <div class="w-full h-1/5"> <span>Approved</span> </div>
+                            <div class="w-full h-3/5 flex items-center"> <span class="text-5xl">271</span> </div>
                             <div class="w-full h-1/5"> <span>January 8, 2025</span> </div>
-                        </div> 
+                        </div>
 
                         <!--REJECTED -->
                         <div class="bg-[#1C1B19] rounded-lg flex flex-col py-4 px-7">
-                            <div class="w-full h-1/5">  <span>Rejected</span>  </div>
-                            <div class="w-full h-3/5 flex items-center">  <span class="text-5xl">271</span> </div>
+                            <div class="w-full h-1/5"> <span>Rejected</span> </div>
+                            <div class="w-full h-3/5 flex items-center"> <span class="text-5xl">271</span> </div>
                             <div class="w-full h-1/5"> <span>January 8, 2025</span> </div>
-                        </div> 
+                        </div>
 
                         <!--Expected Visitors-->
                         <div class="bg-[#1C1B19] rounded-lg flex flex-col py-4 px-7">
-                            <div class="w-full h-1/5">  <span>Expected Visitors</span>  </div>
-                            <div class="w-full h-3/5 flex items-center">  <span class="text-5xl">271</span> </div>
+                            <div class="w-full h-1/5"> <span>Expected Visitors</span> </div>
+                            <div class="w-full h-3/5 flex items-center"> <span class="text-5xl">271</span> </div>
                             <div class="w-full h-1/5"> <span>January 8, 2025</span> </div>
-                        </div> 
+                        </div>
 
                         <!--Present-->
                         <div class="bg-[#1C1B19] rounded-lg flex flex-col py-4 px-7">
-                            <div class="w-full h-1/5">  <span>Present</span>  </div>
-                            <div class="w-full h-3/5 flex items-center">  <span class="text-5xl">2721</span> </div>
+                            <div class="w-full h-1/5"> <span>Present</span> </div>
+                            <div class="w-full h-3/5 flex items-center"> <span class="text-5xl">2721</span> </div>
                             <div class="w-full h-1/5"> <span>January 8, 2025</span> </div>
                         </div>
-    
+
                     </div>
                     <div class="w-full h-[15%] flex flex-col mb-4">
                         <div class="w-full h-full flex items-center justify-between pl-10 pt-7">
                             <div class="w-[30%] h-full flex justify-between items-center font-bold text-sm">
                                 <!-- Active Form Tab -->
-                                <div class="cursor-pointer tab-button text-black opacity-100 hover:opacity-80" data-tab="forms">
+                                <div class="cursor-pointer tab-button text-black opacity-100 hover:opacity-80"
+                                    data-tab="forms">
                                     <span>Forms</span>
                                 </div>
-                            
+
                                 <!-- Attendance Tab -->
-                                <div class="cursor-pointer tab-button text-gray-500 opacity-70 hover:text-black hover:opacity-100" data-tab="attendance">
+                                <div class="cursor-pointer tab-button text-gray-500 opacity-70 hover:text-black hover:opacity-100"
+                                    data-tab="attendance">
                                     <span>Attendance</span>
                                 </div>
-                            
+
                                 <!-- Visitors Records Tab -->
-                                <div class="cursor-pointer tab-button text-gray-500 opacity-70 hover:text-black hover:opacity-100" data-tab="visitors-records">
+                                <div class="cursor-pointer tab-button text-gray-500 opacity-70 hover:text-black hover:opacity-100"
+                                    data-tab="visitors-records">
                                     <span>Visitors Records</span>
                                 </div>
                             </div>
-                            
+
                             <div class="relative inline-block">
-                                <select class="block appearance-none bg-white border border-gray-300 text-gray-700 py-2 px-2 pr-8 rounded-xl leading-tight focus:outline-none focus:border-black">
+                                <select
+                                    class="block appearance-none bg-white border border-gray-300 text-gray-700 py-2 px-2 pr-8 rounded-xl leading-tight focus:outline-none focus:border-black">
                                     <option value="date">Sort: Date</option>
                                     <option value="name">Sort: Name</option>
                                     <option value="title">Sort: Title</option>
@@ -189,96 +207,123 @@
                         </div>
                         <h1 class="bg-black h-[1px]"></h1>
                     </div>
-                        
-                            <!--FORMS TAB CONTENT-->
-                            <div id="forms" class="tab-content h-[60%] w-full"> 
-                                <div class="grid grid-cols-7 gap-3 font-bold text-sm opacity-95 h-[5%] px-8">
-                                    <div class="flex justify-center">Date</div>
-                                    <div class="flex justify-center ">Senders Name</div>
-                                    <div class="flex justify-center ">Preferred Time</div>
-                                    <div class="flex justify-center ">Preferred Date</div>
-                                    <div class="flex justify-center ">Visitor Count</div>
-                                    <div class="flex justify-center ">Status</div>
-                                    <div class="flex justify-center ">Updated</div>
-                                </div>
-                                <div class="w-full h-[95%] overflow-y-auto max-h-[420px]">
-                                    <!-- SCROLLABLE DATA -->
-                                    <div class="flex flex-col gap-4 px-1 mt-3 ">
-                                        <!-- Row 1 -->
-                                        <div class="grid grid-cols-7 gap-3 bg-white w-full h-12 outline outline-black outline-1 rounded-md px-7 text-base">
-                                            <div class=" flex justify-center items-center">02-19-2024</div>
-                                            <div class=" flex justify-center items-center">Olivia Harper</div>
-                                            <div class=" flex justify-center items-center "> 02:30-03:59</div>
-                                            <div class=" flex justify-center items-center">August 25, 2024</div>
-                                            <div class=" flex justify-center items-center ">10</div>
-                                            <div class=" flex justify-center items-center px-9">
-                                                <div class="w-full bg-[#9C7744] flex justify-center items-center text-white outline outline-1 outline-black rounded-sm">
-                                                    Confirmed
-                                                </div>
-                                            </div>
-                                           
-                                            <div class=" flex justify-center items-center">02-19-2024</div>
+
+                    <!--FORMS TAB CONTENT-->
+                    <div id="forms" class="tab-content h-[60%] w-full">
+                        <div class="grid grid-cols-7 gap-3 font-bold text-sm opacity-95 h-[5%] px-8">
+                            <div class="flex justify-center">Date</div>
+                            <div class="flex justify-center ">Senders Name</div>
+                            <div class="flex justify-center ">Preferred Time</div>
+                            <div class="flex justify-center ">Preferred Date</div>
+                            <div class="flex justify-center ">Visitor Count</div>
+                            <div class="flex justify-center ">Status</div>
+                            <div class="flex justify-center ">Updated</div>
+                        </div>
+                        <div class="w-full h-[95%] overflow-y-auto max-h-[420px]">
+                            <!-- SCROLLABLE DATA -->
+                            <div class="flex flex-col gap-4 px-1 mt-3 ">
+                                <!-- Row 1 -->
+                                <div
+                                    class="grid grid-cols-7 gap-3 bg-white w-full h-12 outline outline-black outline-1 rounded-md px-7 text-base">
+                                    <div class=" flex justify-center items-center">02-19-2024</div>
+                                    <div class=" flex justify-center items-center">Olivia Harper</div>
+                                    <div class=" flex justify-center items-center "> 02:30-03:59</div>
+                                    <div class=" flex justify-center items-center">August 25, 2024</div>
+                                    <div class=" flex justify-center items-center ">10</div>
+                                    <div class=" flex justify-center items-center px-9">
+                                        <div
+                                            class="w-full bg-[#9C7744] flex justify-center items-center text-white outline outline-1 outline-black rounded-sm">
+                                            Confirmed
                                         </div>
-                                        
-                                        <!-- Row 2 -->
-                                        
-                                        <!-- Add more rows dynamically -->
                                     </div>
-                                    
-                                </div>  
+
+                                    <div class=" flex justify-center items-center">02-19-2024</div>
+                                </div>
+
+                                <!-- Row 2 -->
+
+                                <!-- Add more rows dynamically -->
                             </div>
 
-                            <!--ATTENDANCE TAB CONTENT-->
-                            <div id="attendance" class="tab-content hidden h-[60%] w-full">
-                                attendance
-                            </div>
+                        </div>
+                    </div>
 
-                            <!--VISITORS TAB CONTENT-->
-                            <div id="visitors-records" class="tab-content hidden h-[6%] w-full">
-                                visitors records
+                    <!-- ATTENDANCE TAB CONTENT -->
+                    <div id="attendance" class="tab-content hidden h-[60%] w-full">
+                        <!-- Header Row -->
+                        <div class="grid grid-cols-6 gap-3 font-bold text-sm opacity-95 h-[5%] px-8">
+                            <div class="flex justify-center items-center">Date</div>
+                            <div class="flex justify-center items-center">Name</div>
+                            <div class="flex justify-center items-center">Status</div>
+                            <div class="flex justify-center items-center">Time In</div>
+                            <div class="flex justify-center items-center">Time Out</div>
+                            <div class="flex justify-center items-center">Remarks</div>
+                        </div>
+
+                        <!-- Scrollable Content -->
+                        <div class="w-full h-[95%] overflow-y-auto max-h-[420px]">
+                            <div class="flex flex-col gap-4 px-1 mt-3">
+                                <!-- Row 1 -->
+                                <div
+                                    class="grid grid-cols-6 gap-3 bg-white w-full h-12 outline outline-black outline-1 rounded-md px-7 text-base">
+                                    <div class="flex justify-center items-center">02-22-2025</div>
+                                    <div class="flex justify-center items-center">John Doe</div>
+                                    <div class="flex justify-center items-center">Present</div>
+                                    <div class="flex justify-center items-center">09:00 AM</div>
+                                    <div class="flex justify-center items-center">05:00 PM</div>
+                                    <div class="flex justify-center items-center">N/A</div>
+                                </div>
+                                <!-- Add more rows as needed -->
                             </div>
-                
+                        </div>
+                    </div>
+
+                    <!--VISITORS TAB CONTENT-->
+                    <div id="visitors-records" class="tab-content hidden h-[60%] w-full">
+                        visitors records
+                    </div>
+
                 </div>
-                </div>
-
             </div>
 
         </div>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const tabs = document.querySelectorAll(".tab-button");
-                const contents = document.querySelectorAll(".tab-content");
-                
-                tabs.forEach(tab => {
-                    tab.addEventListener("click", function () {
-                        // Remove active styling from all tabs
-                        tabs.forEach(t => {
-                            t.classList.remove("text-black", "opacity-100");
-                            t.classList.add("text-gray-500", "opacity-70");
-                        });
-                        
-                        // Hide all content sections
-                        contents.forEach(content => content.classList.add("hidden"));
-                        
-                        // Activate the clicked tab
-                        this.classList.remove("text-gray-500", "opacity-70");
-                        this.classList.add("text-black", "opacity-100");
-                        
-                        // Show the corresponding content
-                        const tabId = this.getAttribute("data-tab");
-                        document.getElementById(tabId).classList.remove("hidden");
+
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const tabs = document.querySelectorAll(".tab-button");
+            const contents = document.querySelectorAll(".tab-content");
+
+            tabs.forEach(tab => {
+                tab.addEventListener("click", function () {
+                    // Remove active styling from all tabs
+                    tabs.forEach(t => {
+                        t.classList.remove("text-black", "opacity-100");
+                        t.classList.add("text-gray-500", "opacity-70");
                     });
+
+                    // Hide all content sections
+                    contents.forEach(content => content.classList.add("hidden"));
+
+                    // Activate the clicked tab
+                    this.classList.remove("text-gray-500", "opacity-70");
+                    this.classList.add("text-black", "opacity-100");
+
+                    // Show the corresponding content
+                    const tabId = this.getAttribute("data-tab");
+                    document.getElementById(tabId).classList.remove("hidden");
                 });
             });
-            document.querySelectorAll('.dropdownButton').forEach(function(dropdownButton) {
-            dropdownButton.addEventListener("click", function() {
+        });
+        document.querySelectorAll('.dropdownButton').forEach(function (dropdownButton) {
+            dropdownButton.addEventListener("click", function () {
                 const dropdownMenu = this.nextElementSibling;
                 dropdownMenu.classList.toggle("hidden");
             });
         });
 
-        document.querySelectorAll('.dropdownMenu').forEach(function(dropdownMenu) {
-            dropdownMenu.addEventListener("click", function(event) {
+        document.querySelectorAll('.dropdownMenu').forEach(function (dropdownMenu) {
+            dropdownMenu.addEventListener("click", function (event) {
                 if (event.target && event.target.matches("div")) {
                     const selectedStatus = event.target.dataset.status;
                     const dropdownButton = this.previousElementSibling;
@@ -289,15 +334,15 @@
         });
 
         // Close dropdown if clicking outside of the dropdown area
-        window.addEventListener("click", function(event) {
+        window.addEventListener("click", function (event) {
             if (!event.target.closest('.relative')) {
-                document.querySelectorAll('.dropdownMenu').forEach(function(menu) {
+                document.querySelectorAll('.dropdownMenu').forEach(function (menu) {
                     menu.classList.add("hidden");
                 });
             }
         });
-        </script>
-    </body>
+    </script>
+</body>
 
 
-    </html>
+</html>
